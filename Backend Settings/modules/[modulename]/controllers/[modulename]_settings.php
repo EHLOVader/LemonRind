@@ -8,16 +8,8 @@ class BatchExport_Settings extends Backend_SettingsController
 	public $form_edit_title = '[moduletitle]';
 	public $form_model_class = '[modulename]_Setting';
 	
-	public $form_redirect = null;
+	public $form_redirect = $this->form_redirect = url('system/settings/');
 	public $form_edit_save_flash = '[moduletitle] configuration has been saved.';
-
-	public function __construct()
-	{
-		parent::__construct();
-		$this->app_tab = 'system';
-		
-		$this->form_redirect = url('system/settings/');
-	}
 
 	public function index()
 	{
@@ -56,4 +48,3 @@ class BatchExport_Settings extends Backend_SettingsController
 
 
 }
-?>
